@@ -33,6 +33,7 @@ class ProcessorUtils:
         :return: Absolute path to source
         """
         path = os.path.join(self._context.input, source)
+        path = os.path.normpath(path)
         if not os.path.exists(path):
             raise FileNotFoundError(f"{path} does not exist. Make sure the path is "
                                     f"relative to the input directory.")
@@ -49,6 +50,7 @@ class ProcessorUtils:
         :return: Absolute path to target
         """
         path = os.path.join(self._context.output, target)
+        path = os.path.normpath(path)
         os.makedirs(os.path.dirname(path), exist_ok=True)
         return os.path.abspath(path)
 

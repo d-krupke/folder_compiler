@@ -17,6 +17,7 @@ class DevNullProcessor(Processor):
         :return:
         """
         self.add_include(".*/\..*")
+        self.add_include("\..+")
         return self
 
     def include_directory(self, path):

@@ -25,11 +25,15 @@ class FolderCompiler:
                                         file_ownership_manager=fsm)
 
     def _process_path(self, source, processors):
-        print(f"Processing '{source}'")
-        for processor in processors:
-            if processor(source, self._context):
-                print(f"Applied '{processor.__class__.__name__}'.")
-                break
+        if os.path.exists(os.path.join(self._context.input, source)):
+            print(f"Processing '{source}'")
+            for processor in processors:
+                if processor(source, self._context):
+                    print(f"Applied '{processor.__class__.__name__}'.")
+                    return True
+        else:
+            print(f"Skipping {source}. Probably bad link.")
+            return True
 
     def compile(self, processors: typing.List[Processor]):
         """
