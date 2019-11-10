@@ -12,7 +12,13 @@ directory to html in the output directory, and copy all images.
 Or compress all flac files in the input directory to ogg in the ouput directory.
 Skipping if the output is newer than the input and deleting orphaned files in the output.
 
-# Example: Compiling a static webpage
+## Install
+
+[pip](https://pypi.org/project/folder-compiler/) or simply clone it and copy the folder.
+That way you can easily adapt it to your own needs (you are free to steal this code as 
+long as you don't make me responsible for anything).
+
+## Example: Compiling a static webpage
 
 This has been my primary motivation to develop this util.
 The existing static webpage compiler have been simply too powerful and complicated for
@@ -21,9 +27,9 @@ add a navigation bar.
 This can be achieved by simple using a markdown compiler and the Jinja template engine.
 Compiling bibtex files to a publications page and stuff like that can also be easily integrated.
 
-The corresponding modules are part of a separate repository. TODO
+The corresponding modules are part of a separate [repository](https://github.com/d-krupke/folder_compiler_static_website).
 
-# Example: Compressing Music
+## Example: Compressing Music
 
 This util can also be used to compress your flac music library to ogg for your phone.
 It skips already compressed files and deletes files that are no longer in the library.
