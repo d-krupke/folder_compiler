@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="folder_compiler",
-    version="0.1.1",
+    version="0.1.3",
     author="Dominik Krupke",
     author_email="krupked@gmail.com",
     description="A simple util for 'compiling' a folder, e.g. to a static website.",

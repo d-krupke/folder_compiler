@@ -48,6 +48,7 @@ class FolderCompiler:
                                             followlinks=self._followlinks):
             relative_root = os.path.relpath(root, input_path)
             if self._process_path(relative_root, processors):
+                # no further processing of folder and its content
                 folders.clear()
                 files.clear()
             for file in files:
